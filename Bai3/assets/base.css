@@ -1,0 +1,11 @@
+/* Common */
+:root {
+    --header-height: 80px;
+    --black-color: #111111;
+    --white-color: white;
+    --button-color: #59c1de;
+    --red-color: red;
+    --gray-black-color: #292929;
+    --sub-nav-width: 200px;
+    --text-color: #c7c7c7;
+}

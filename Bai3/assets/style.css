@@ -1,5 +1,209 @@
+
+/* Reset CSS */
 * {
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: Spiegel, "Arial Narrow", Arial, sans-serif;
+    font-family: "FF Mark W05",Arial,sans-serif;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
     width: 100%;
+}
+
+
+/* Header */
+.header {
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    position: fixed;
+    background-color: var(--black-color);
+    width: 100%;
+    padding: 0 32px 0 36px;
+    border-bottom: 2px solid rgba(51,51,51,.25);
+    text-transform: uppercase;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+}
+
+.brand__icon-extra {
+    color: #7e7e7e;
+    font-size: 12px;
+    margin-left: 4px;
+    position: relative;
+    top: -4px;
+    right: 1px;
+}
+
+.brand:hover {
+    cursor: pointer;
+}
+.brand:hover .brand__riot {
+    fill: var(--red-color);
+}
+.brand:hover .brand__icon-extra {
+    color: var(--red-color);
+}
+
+.logo__lol {
+    margin-left: 22px;
+}
+
+/* Navigation Header */
+.navigation {
+    margin-left: 22px;
+}
+
+.nav__list {
+    display: flex;
+    list-style: none;
+}
+.nav__item {
+    position: relative;
+}
+.nav__item--extra:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    background-color: transparent;
+    width: 100%;
+    height: 50px;
+}
+
+.nav__item:hover {
+    background-color: #333333;
+    border-radius: 5px;
+
+}
+.nav__item-link {
+    color: var(--white-color);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 120%;
+    display: block;
+    padding: 7.5px 16px;
+    letter-spacing: 2px;
+    margin-left: 4px;
+    font-family: "FF Mark W05",Arial,sans-serif;
+    position: relative;
+
+}
+.nav__item-link::after {
+    content: "";
+    position: absolute;
+    bottom: -21px;
+    left: 0;
+    background-color: var(--button-color);
+    width: calc(100% + 4px);
+    height: 4px;
+    border-radius: 4px;
+    display: none;
+}
+
+li:hover .nav__item-link::after {
+    display: inline-block;
+}
+
+.nav__item-link-img--white {
+    display: none;
+    position: absolute;
+    right: 16px;
+    top: 9px;
+}
+
+li:hover .nav__item-link-img--white {
+    display: block;
+}
+
+.nav__item-link-icon {
+    color: #7e7e7e;
+    font-size: 12px;
+}
+
+.nav__item:hover .nav__item-sub-nav {
+    display: block;
+}
+
+/* Sub Navigation */
+.nav__item-sub-nav::before {
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    top: -4px;
+    left: 0;
+    background-color: var(--button-color);
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.nav__item-sub-nav {
+    position: absolute;
+    background-color: var(--gray-black-color);
+    list-style: none;
+    width: var(--sub-nav-width);
+    top: calc(var(--header-height) / 2 + 10px );
+    left: 0;
+    padding:12px 0px;
+    border-radius: 2px;
+    box-shadow: 0px 4px 16px 0px rgb(0 0 0 / 20%);
+    display: none;
+    /* z-index: 1; */
+}
+
+.nav__item-sub-nav-item {
+    margin: 5px 16px;
+}
+
+.nav__item-sub-nav-item:hover {
+    background-color: rgba(128,128,128,.3);
+    border-radius: 5px;
+}
+
+.nav__item-sub-nav-item-link {
+    padding: 8px 16px;
+    display: flex;
+    font-size: 13px;
+    color: var(--text-color);
+    text-transform:initial;
+    font-weight: 500;
+    letter-spacing: 1px;
+    align-items: center;
+    position: relative;
+}
+
+.nav__item-sub-nav-item-link:hover {
+    color: var(--white-color);
+    transition: 0.5s;
+}
+
+.nav__item-sub-nav-item-link:hover .nav__item-sub-nav-item-link-img-support--white{
+    display: block;
+}
+.nav__item-sub-nav-item-link:hover .nav__item-sub-nav-item-link-img-merch--white {
+    display: block;
+}
+.nav__item-sub-nav-item-link-img-merch--white {
+    display: none;
+    position: absolute;
+    left: 61px;
+    top: 14px;
+}
+
+.nav__item-sub-nav-item-link-img-support--white {
+    display: none;
+    position: absolute;
+    left: 72px;
+    top: 13px;
 }
