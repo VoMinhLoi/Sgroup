@@ -6,7 +6,6 @@
     box-sizing: border-box;
     font-family: Spiegel, "Arial Narrow", Arial, sans-serif;
     font-family: "FF Mark W05",Arial,sans-serif;
-
 }
 
 a {
@@ -62,6 +61,7 @@ a {
 /* Navigation Header */
 .navigation {
     margin-left: 22px;
+    width: 1020px;
 }
 
 .nav__list {
@@ -81,11 +81,6 @@ a {
     height: 50px;
 }
 
-.nav__item:hover {
-    background-color: #333333;
-    border-radius: 5px;
-
-}
 .nav__item-link {
     color: var(--white-color);
     font-size: 12px;
@@ -166,11 +161,6 @@ li:hover .nav__item-link-img--white {
     margin: 5px 16px;
 }
 
-.nav__item-sub-nav-item:hover {
-    background-color: rgba(128,128,128,.3);
-    border-radius: 5px;
-}
-
 .nav__item-sub-nav-item-link {
     padding: 8px 16px;
     display: flex;
@@ -207,3 +197,10 @@ li:hover .nav__item-link-img--white {
     left: 72px;
     top: 13px;
 }
+
+/* Button Group */
+.button-group {
+    display: flex;
+    align-items: center;
+}
+
