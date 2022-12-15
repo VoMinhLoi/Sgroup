@@ -1,0 +1,64 @@
+/* Common */
+:root {
+    --header-height: 80px;
+    --black-color: #111111;
+    --white-color: white;
+    --button-color: #59c1de;
+    --red-color: red;
+    --gray-black-color: #292929;
+    --sub-nav-width: 200px;
+    --text-color: #c7c7c7;
+}
+
+.link:hover {
+    background-color: #333333;
+    border-radius: 5px;
+}
+
+.link-sub:hover {
+    background-color: rgba(128,128,128,.3);
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #282828;
+}
+
+.border-radius-12px {
+    border-radius: 12px !important;
+}
+
+/* BUTTON */
+.button {
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.button.button--size-s {
+    width: 32px;
+    height: 32px;
+    padding: 8px;
+}
+
+.button.button--size-m {
+    margin: 0 6px;
+    padding: 8px 16px;
+    background-color: #282828;
+    border: none;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.button.button--light-blue {
+    background-color: var(--button-color);
+    color: var(--black-color);
+    letter-spacing: 2px;
+
+}
+
+.button.button--light-blue:hover {
+    background-color: #3eb4d5;
+    
+}
