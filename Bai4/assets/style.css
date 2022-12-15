@@ -143,6 +143,8 @@ body {
 .infor {
     margin-left: 12px;
     flex-grow: 1;
+    font-family: sans-serif;
+
 }
 
 .infor__name {
@@ -172,6 +174,8 @@ body {
     background-color: var(--white-color);
     border-radius: 100%;
     border: 1px solid white;
+    height: 35px;
+    width: 34px;
     z-index: 1;
 }
 
@@ -256,6 +260,8 @@ body {
     background: url(/images/kietom.jpg) no-repeat center;
     object-fit: cover;
     box-shadow: 0 0 2px black;
+    cursor: pointer;
+    visibility: hidden;
 }
 
 .messenger::after {
@@ -306,3 +312,50 @@ body {
     font-size: 22px;
 }
 
+.messenger:hover .dialog__close {
+    display: block;
+}
+
+.dialog__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background-color: var(--white-color);
+    box-shadow: 0 0 5px var(--black-color);
+    border-radius: 100%;
+    border: none;
+    display: none;
+}
+
+.show-messenger {
+    width: 56px;
+    height: 56px;
+    position: absolute;
+    bottom: 40px;
+    right: 20px;
+    border-radius: 100%;
+    object-fit: cover;
+    box-shadow: 0 0 2px black;
+    cursor: pointer;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+@keyframes show {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+
+#messenger1:checked ~ .messenger{
+    visibility: visible;
+    animation: show linear 0.5s;
+}
