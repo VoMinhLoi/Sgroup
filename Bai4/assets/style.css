@@ -242,8 +242,10 @@ body {
     color: var(--black-color);
     font-weight: bold;
 }
-.chat { 
-}
+
+/* CHAT */
+.chat { }
+
 .messenger {
     width: 56px;
     height: 56px;
@@ -268,7 +270,10 @@ body {
     border: 2px solid white;
 }
 
-
+.messenger:hover .dialog {
+    cursor: pointer;
+    display: block;
+}
 
 .dialog {
     position: absolute;
@@ -284,10 +289,7 @@ body {
     display: none;
 }
 
-.messenger:hover dialog {
-    cursor: pointer;
-    display: block;
-}
+
 
 .dialog::after {
     position: absolute;
