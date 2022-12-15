@@ -23,6 +23,9 @@ a {
     display: flex;
     align-items: center;
     position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     background-color: var(--black-color);
     width: 100%;
     padding: 0 32px 0 36px;
@@ -204,3 +207,20 @@ li:hover .nav__item-link-img--white {
     align-items: center;
 }
 
+/* Container */
+.container {
+    margin-top: var(--header-height);
+    height: 900px;
+}
+
+.hsvRhV {
+    height: 522px;
+    left: 8px;
+    top: -12px;
+    width: 1381.2px;
+    position: absolute;
+    display: block;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    aspect-ratio: auto 1726 / 652;
+}
