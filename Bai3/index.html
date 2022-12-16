@@ -12,7 +12,7 @@
     <title>Document</title>
 </head>
 
-<body>
+<body onLoad="playVideo()">
     <div class="wrapper">
         <header class="header">
             <div class="brand">
@@ -84,10 +84,37 @@
             </div>
         </header>
         <div class="container">
-            
+            <div class="video__background">
+                <video preload="metadata" id="video__background-src" class="video__background-src" >
+                    <source src="https://www.leagueoflegends.com/static/hero-blurred-89a1d97affb8756b6763d75dcab20bb6.mp4" type="video/mp4">
+                    <source src="https://www.leagueoflegends.com/static/hero-blurred-89a1d97affb8756b6763d75dcab20bb6.mp4" type="video/ogg">
+                
+                </video>
+            </div>
+            <button onclick="playVideo()">ok</button>
         </div>
+        
         <footer class="footer"></footer>
     </div>
+    <script>
+        var myVideo = document.getElementById("video__background-src");
+        function playVideo() {
+            while(true){
+                myVideo.play();
+            }           
+        }
+        
+        // var promise = document.querySelector('video').play();
+
+        // if (promise !== undefined) {
+        // promise.then(_ => {
+        //     // Autoplay started!
+        // }).catch(error => {
+        //     // Autoplay was prevented.
+        //     // Show a "Play" button so that user can start playback.
+        // });
+        // }
+    </script>
 </body>
 
 </html>

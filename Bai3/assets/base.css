@@ -62,3 +62,49 @@
     background-color: #3eb4d5;
     
 }
+
+/* FRAME */
+.frame {
+    position: relative;
+    margin:  40px 0;
+    width: 100%;
+    height: 100%;
+    border-color: black;
+
+}
+
+.frame__item {
+    width: 100%;
+    height: 100%;
+}
+
+.frame__item:nth-child(1) {
+    width: 90%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: 1px solid;
+}
+
+.frame__item:nth-child(2) {
+    height: 93.3%;
+    border-right: 1px solid;
+    position: absolute;
+    top: 60px;
+    right: 0;
+}
+.frame__item:nth-child(3) {
+    border-bottom: 1px solid;
+    border-left: 1px solid;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+#myCanvas {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}

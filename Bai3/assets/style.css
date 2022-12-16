@@ -209,18 +209,18 @@ li:hover .nav__item-link-img--white {
 
 /* Container */
 .container {
-    margin-top: var(--header-height);
+    margin-top: calc(var(--header-height) + 0px);
     height: 900px;
 }
 
-.hsvRhV {
-    height: 522px;
-    left: 8px;
-    top: -12px;
-    width: 1381.2px;
-    position: absolute;
-    display: block;
-    overflow-clip-margin: content-box;
-    overflow: clip;
-    aspect-ratio: auto 1726 / 652;
+.video__background {
+    width: 100%;
+    height: 620px;
+}
+
+.video__background-src {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    object-position:center top;
 }
