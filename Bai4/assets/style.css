@@ -5,6 +5,8 @@
     --black-color: black;
     --gray-color: gray;
     --facebook-color:  #3975ea;
+    --bottom-position-40px: 40px;
+    --bottom-position-1: calc(var(--bottom-position-40px) + 80px);
 }
 li.margin-rl-10px {
     margin: 0 10px;
@@ -248,19 +250,22 @@ body {
 }
 
 /* CHAT */
-.chat { }
+.chat { 
+    position: relative;
+}
 
 .messenger {
     width: 56px;
     height: 56px;
     position: absolute;
-    bottom: 120px;
+    bottom: var(--bottom-position-1);
     right: 20px;
     border-radius: 100%;
     background: url(/images/kietom.jpg) no-repeat center;
     object-fit: cover;
     box-shadow: 0 0 2px black;
     cursor: pointer;
+    transition: tranform linear 0.2s;
     visibility: hidden;
 }
 
@@ -333,7 +338,7 @@ body {
     width: 56px;
     height: 56px;
     position: absolute;
-    bottom: 40px;
+    bottom: var(--bottom-position-40px);
     right: 20px;
     border-radius: 100%;
     object-fit: cover;
@@ -355,7 +360,29 @@ body {
     }
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+}
+
 #messenger1:checked ~ .messenger{
     visibility: visible;
     animation: show linear 0.5s;
+
+}
+
+.close-messenger {
+    position: absolute;
+    right: 16px;
+    bottom: calc(var(--bottom-position-1) + -50px);
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px var(--black-color);
 }
