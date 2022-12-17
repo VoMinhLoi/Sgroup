@@ -92,10 +92,12 @@
 
     border: 1px solid var(--white-color);
     padding: 5px;
+    transition: 0.3s;
 }
 
 .img__introduce:hover .button-play-for-free::after {
     border-radius: 0;
+    transition: 0.3s;
 }
 
 /* FRAME */
