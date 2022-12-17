@@ -93,42 +93,69 @@
                     </video>
                     
                 </div>
-                <div class="video__introduce">
+                <div class="video__introduce common-border">
                     <video preload="metadata" id="video__background-src" class="video__background-src" autoplay >
                         <source src="https://www.leagueoflegends.com/static/hero-0632cbf2872c5cc0dffa93d2ae8a29e8.webm" type="video/mp4">
                         <source src="https://www.leagueoflegends.com/static/hero-0632cbf2872c5cc0dffa93d2ae8a29e8.webm" type="video/ogg">
                     </video>
-                    <div class="img__introduce">
+                    <div class="img__introduce ">
                         <img class=" img__introduce-img" src="/images/logoLoL.png" alt="">
                         <div class="img__introduce-button">
+                            <!-- <svg fill="white" data-v-7053fadc="" viewBox="0 0 437 50"><path data-v-7053fadc="" d="M436,1v28.59L416.55,49L98,49H1V20.41L20.45,1L84,1H436 M437,0H84v0H20.03L0,20v30h98v0h318.97L437,30V0L437,0z"></path></svg> -->
                             <button class="button-play-for-free ">Play for free</button>
-                        </div>
+                        </div> 
                     </div>
                 </div>
                 
             </div>
+            <div class="news">
+                <div class="news-wrapper">
+                    <div class="news__title"><h1 class="title">featured news <span class="title__minus">━</span></h1></div>
+                    <ul class="news__list">
+                        <li class="news__list-item">
+                            <a href="#" class="news__list-item-link common-border">
+                                <div class="news__list-item-link-wrapper">
+                                    <img class="news__list-item-link-img" src="./images/new1.jpg" alt="">
+                                </div>
+                                <div class="news__list-item-infor">
+                                    <h2 class="news__list-item-infor-title">game updates </h2>
+                                    <h1 class="news__list-item-infor-name">Winterblessed 2022 Event Trailer</h1>
+                                    <p class="news__list-item-infor-description">As the first snow falls in Runeterra, so begins the season of Polaris.</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="news__list-item">
+                            <a href="#" class="news__list-item-link common-border">
+                                <div class="news__list-item-link-wrapper">
+                                    <img class="news__list-item-link-img" src="./images/new2.jpg" alt="">
+                                </div>
+                                <div class="news__list-item-infor">
+                                    <h2 class="news__list-item-infor-title">media</h2>
+                                    <h1 class="news__list-item-infor-name">Winterblessed 2022 | Official Skins Theme - League of Legends</h1>
+                                    <p class="news__list-item-infor-description">Take a stroll down snow-swept trails accompanied by the Winterblessed 2022 official skins theme.Take a stroll down snow-swept trails accompanied by the Winterblessed 2022 official skins theme.</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="news__list-item">
+                            <a href="#" class="news__list-item-link common-border">
+                                <div class="news__list-item-link-wrapper">
+                                    <img class="news__list-item-link-img" src="./images/new3.jpg" alt="">
+                                </div>
+                                <div class="news__list-item-infor">
+                                    <h2 class="news__list-item-infor-title">games updates</h2>
+                                    <h1 class="news__list-item-infor-name">/Dev: Yuumi’s Rework</h1>
+                                    <p class="news__list-item-infor-description">A look at Yuumi’s current issues and how we’re thinking about her rework</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="#" class="news__detail">View all <span class="news__detail-arrow"><i class="fa-solid fa-arrow-right news__detail-arrow-icon"></i></span></a> 
+                </div>
+            </div>
         </div>
-        
         <footer class="footer"></footer>
     </div>
-    <script>
-        var myVideo = document.getElementById("video__background-src");
-        function playVideo() { 
-            while(true){
-                myVideo.play();
-            }           
-        }
-        // var promise = document.querySelector('video').play();
-
-        // if (promise !== undefined) {
-        // promise.then(_ => {
-        //     // Autoplay started!
-        // }).catch(error => {
-        //     // Autoplay was prevented.
-        //     // Show a "Play" button so that user can start playback.
-        // });
-        // }
-    </script>
+    
 </body>
 
 </html>
