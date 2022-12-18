@@ -29,6 +29,10 @@
     border-radius: 12px !important;
 }
 
+.padding-right-60px{
+    padding-right: 60px;
+}
+
 /* BUTTON */
 .button {
     border-radius: 5px;
@@ -118,11 +122,15 @@
 /* TITLE COMMON */
 .title {
     text-transform: uppercase;
-    transform: rotate(-90deg) translateY(-4px);
     white-space: nowrap;
     font-size: 9px;
     letter-spacing: 2px;
     width: 60px;
+
+    transform: translateX(-50%);
+    padding-top: 100%;
+    transform: rotate(-90deg) translate(-100%, -50%);
+    transform-origin: left top;
 }
 
 .title__minus {
