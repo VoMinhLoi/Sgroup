@@ -413,7 +413,8 @@ li:hover .nav__item-link-img--white {
     /* transition: opacity 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0s; */
 }
 
-.profile__content-title {
+.profile__content-title,
+.profile__content-slide {
     position: relative;
     z-index: 1;
 }
@@ -478,4 +479,14 @@ li:hover .nav__item-link-img--white {
 .profile__content-button-item-link:hover {
     transition: border-radius 0.2s linear;
     border-radius: 0;
+}
+
+.profile__content-slide {
+    display: flex;
+
+}
+
+.profile__content-slide-nav,
+.profile__content-slide-group-img {
+    width: 50%;
 }
