@@ -1,1 +1,2 @@
 # Sgroup
+theme: Sgroup
