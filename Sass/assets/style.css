@@ -1,0 +1,15 @@
+.parent {
+  width: 100%;
+  height: 100px;
+  background-color: rgb(226, 64, 64);
+}
+.parent .child1 {
+  width: 50%;
+  height: 50%;
+  background-color: rgb(134, 134, 235);
+}
+.parent .child2 {
+  width: 50%;
+  height: 50%;
+  background-color: green;
+}/*# sourceMappingURL=style.css.map */

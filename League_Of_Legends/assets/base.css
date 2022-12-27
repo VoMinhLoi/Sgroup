@@ -108,14 +108,39 @@
 .common-border::before {
     position: absolute;
     content: "";
-    top: -12px;
-    left: 12px;
+    top: -2%;
+    left: 1%;
     width: 98%;
     height: 104%;
     border: 1px solid var(--border-color);
     border-radius: 0 30px 0 0;
     z-index: 1;
 }
+
+.common-border-small::before {
+    position: absolute;
+    content: "";
+    top: -4%;
+    left: 2%;
+    width: 96%;
+    height: 100%;
+    border: 1px solid var(--border-color);
+    border-radius: 0 30px 0 0;
+    z-index: 1;
+}
+
+.common-border-medium::before {
+    position: absolute;
+    content: "";
+    top: -4%;
+    left: 2%;
+    width: 96%;
+    height: 108%;
+    border: 1px solid var(--border-color);
+    border-radius: 0 30px 0 0;
+    z-index: 1;
+}
+
 
 
 

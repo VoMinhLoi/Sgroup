@@ -1,0 +1,21 @@
+$red: rgb(226, 64, 64);
+$blue: rgb(134, 134, 235);
+$green: green;
+
+@mixin common {
+    width: 50%;
+    height: 50%;
+}
+.parent {
+    width: 100%;
+    height: 100px;
+    background-color: $red;
+    .child1 {
+        @include common;
+        background-color: $blue;
+    }
+    .child2 {
+        @include common;
+        background-color: $green;
+    }
+}
