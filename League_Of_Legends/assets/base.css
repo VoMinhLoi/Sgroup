@@ -141,8 +141,12 @@
     z-index: 1;
 }
 
-
-
+/* BLOCK WIDTH 60px */
+.WIDTH-BLOCK-60px::after {
+    content: "";
+    width: 60px;
+    height: 100%;
+}
 
 /* TITLE COMMON */
 .title {
