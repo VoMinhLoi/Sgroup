@@ -12,8 +12,10 @@ function LargestEven(){
             if(t > result)
                 result = t;
     }
-
-    alert("Trong dảy số vừa nhập: "+ Array + " thì số chẵn lớn nhất là: " + result);
+    if(result != -1)
+       alert("Trong dảy số vừa nhập: "+ Array + " thì số chẵn lớn nhất là: " + result);
+    else
+        alert("không có số nào chia hết cho 2 nên return "+ result);
 }
 
 function Fibonance(){
