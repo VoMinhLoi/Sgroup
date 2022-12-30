@@ -35,6 +35,7 @@
 
 /* BUTTON */
 .button {
+    display: block;
     border-radius: 5px;
     text-transform: uppercase;
 }
@@ -54,6 +55,18 @@
     font-size: 13px;
     font-weight: 600;
     letter-spacing: 1px;
+}
+
+.button.button--size-l {
+    width: 170px;
+    padding: 10px 20px;
+    font-size: 12px;
+}
+
+.button.button--size-l:hover,
+.button--size-xl:hover {
+    transition: border-radius 0.2s linear;
+    border-radius: 0;
 }
 
 .button.button--light-blue {
@@ -160,6 +173,10 @@
     padding-top: 100%;
     transform: rotate(-90deg) translate(-100%, -50%);
     transform-origin: left top;
+}
+
+.title--white {
+    color: var(--white-color);
 }
 
 .title__minus {
