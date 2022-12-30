@@ -13,7 +13,7 @@ function LargestEven(){
                 result = t;
     }
 
-    alert("Trong dảy số vừa nhập: "+ Array + " thì số lớn nhất là: " + result);
+    alert("Trong dảy số vừa nhập: "+ Array + " thì số chẵn lớn nhất là: " + result);
 }
 
 function Fibonance(){
