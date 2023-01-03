@@ -130,6 +130,18 @@
     z-index: 1;
 }
 
+.common-full-border::before {
+    position: absolute;
+    content: "";
+    top: -2%;
+    left: 1%;
+    width: 99%;
+    height: 75%;
+    border: 1px solid var(--border-color);
+    border-radius: 0 30px 0 0;
+    z-index: 1;
+}
+
 .common-border-small::before {
     position: absolute;
     content: "";
