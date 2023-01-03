@@ -30,6 +30,61 @@ function Fibonance(){
     }
     alert(tg);
 }
+var Cong = function() {
+    for(let i = 0; i < arguments.length; i++){
+        console.log(arguments[i]);
+    }
+}
 
-LargestEven(11);
-Fibonance(7);
+var RepeatLetter1 = function (str){
+    var Array1 = str.split("");
+    var Array = []
+    let String = "";
+    for(let i = 0 ; i < str.length; i++){
+        // Array.push(Array1[i].concat(Array1[i]));
+        String += Array1[i] + Array1[i];
+    }
+    console.log(String);
+}
+
+RepeatLetter1("Hello World");
+
+var RepeatLetter2 = function (str){
+    var Array1 = str.split("");
+    var Array = []
+    let String = "";
+
+    for(let i = 0 ; i < str.length; i++){
+        Array.push(Array1[i].concat(Array1[i]));
+        String += Array[i];
+    }
+    console.log(String);
+}
+RepeatLetter2("Hello W");
+let student = {
+    name: "onkeydown ",
+    tele: 2
+}
+
+
+console.log(student["name"] + student.name);
+
+let freeShipping = {
+    Shampoo: 44.02,
+    RubberDucks: 5.99
+}
+
+
+function Free(object){
+    var result = 0;
+    for(var value in object){
+        result += object[value];
+        console.log(result)
+    }
+    if(result > 50)
+        console.log("Free Ship")
+    else
+        console.log("Not free Ship")
+}
+
+Free(freeShipping);
