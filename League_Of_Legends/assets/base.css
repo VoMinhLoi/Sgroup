@@ -29,8 +29,18 @@
     border-radius: 12px !important;
 }
 
+.padding-20px {
+    padding: 0 60px;
+    letter-spacing: 2px;
+    font-size: 13px;
+}
+
 .padding-right-60px{
     padding-right: 60px;
+}
+
+.no-padding {
+    padding: 0;
 }
 
 /* BUTTON */
@@ -95,6 +105,14 @@
     border: none;
     margin: 30px 0;
     position: relative;
+}
+
+.button-play-for-free--orange {
+    background-color: #caaa67;
+}
+
+.button-play-for-free + .button-play-for-free {
+    margin-left: 20px;
 }
 
 .button-play-for-free::after {
