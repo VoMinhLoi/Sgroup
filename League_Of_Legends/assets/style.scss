@@ -1291,6 +1291,18 @@ a.button.skin__content-main-infor-link {
     color: white;
 }
 
+.map-wrapper::after {
+    content: "";
+    background-image: url(/images/background-cross-white.png);
+    height: 460px;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-repeat: repeat-x;
+    z-index: -1;
+}
+
 .map {
     width: 100%;
     height: 100%;
@@ -1321,7 +1333,7 @@ a.button.skin__content-main-infor-link {
 }
 
 .map__content-img-wrapper-main {
-    width: 94%;
+    width: 100%;
     height: 100%;
 }
 
@@ -1334,4 +1346,125 @@ a.button.skin__content-main-infor-link {
 .map__content-text {
     z-index: 1;
     text-align: center;
+}
+
+.map__context-text-button {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+// FEATURE
+.feature-wrapper {
+    height: 800px;
+}
+
+.feature {
+    width: 100%;
+    display: flex;
+    padding: 5rem 0px;
+    height: 100%;
+}
+
+.feature__title {
+    transform: translateY(20px);
+}
+
+.feature__content {
+    flex: 1 1 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.feature__content-title {
+    margin-bottom: 65px;
+}
+
+.feature__content-list {
+    display: flex;
+    margin: 10px auto 0;
+    list-style: none;
+}
+
+.feature__content-item {
+    flex: 1 1 48%;
+    min-width: 0px;
+    max-width: 460px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: #f6f6f6;
+    position: relative;
+}
+
+.feature__content-item-link {
+    display: block;
+}
+
+.feature__content-item-link-text {
+    text-align: center;
+    display: block;
+    padding: 10%;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: var(--black-color);
+}
+
+.video-end-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 400px;
+    max-height: 1200px;
+
+}
+
+.video-end {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-end__main {
+    object-fit: cover;
+    object-position: center top;
+    width: 100%;
+    height: 100%;
+}
+
+.video-end__text {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.download {
+    display: flex;
+    padding: 20px 60px;
+    align-items: center;
+    background-color: #0c1c24;
+    justify-content: space-between;
+
+}
+
+.download__title {
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #d3dadd;
+}
+
+.download__description {
+    color: rgb(209, 218, 222);
+    font-size: 13px;
+}
+
+.download__group {
+    display: flex;
+    width: 20%;
+    align-items: center;
 }
