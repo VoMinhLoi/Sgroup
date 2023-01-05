@@ -55,6 +55,10 @@
     color: black !important;
 }
 
+.bg-color-black {
+    background-color: #111111 !important;
+}
+
 /* BUTTON */
 .button {
     display: block;

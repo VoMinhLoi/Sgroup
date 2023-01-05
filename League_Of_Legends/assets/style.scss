@@ -215,7 +215,6 @@ li:hover .nav__item-link-img--white {
 /* Container */
 .container {
     margin-top: calc(var(--header-height) + 0px);
-    height: 900px;
 }
 
 .video {
@@ -1417,7 +1416,7 @@ a.button.skin__content-main-infor-link {
     height: 100vh;
     min-height: 400px;
     max-height: 1200px;
-
+    // height: 420px;
 }
 
 .video-end {
@@ -1467,4 +1466,112 @@ a.button.skin__content-main-infor-link {
     display: flex;
     width: 20%;
     align-items: center;
+}
+
+// FOOTER
+.footer__list-wrapper {
+    height: 84px;
+    margin: 0 auto;
+    display: flex;
+    background-color: #292929;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__list {
+    padding: 24px;
+    list-style: none;
+}
+
+.footer__item {
+    display: inline-block;
+}
+
+.footer__item-link {
+    color: var(--white-color);
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+
+.footer__item-link:hover {
+    background-color: rgba(128,128,128,.3);
+}
+
+.footer__contact {
+    background-color: #111111;
+    padding-bottom: 48px;
+}
+
+.footer__list-logo {
+    height: 80px;
+    padding: 18px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer__list-logo-icon-item {
+    display: inline-block;
+    margin: 5px;
+}
+
+.footer__list-logo-icon-item-link {
+    width: 32px;
+    height: 32px;
+    color: var(--white-color);
+    display: inline-block;
+    background-color: #282828;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.footer__list-logo-icon-item-link-icon {
+    padding: 8px;
+}
+
+.footer__logo-riot {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    padding: 24px 0px 20px;
+}
+
+.footer__logo-riot-svg {
+    fill: #737373;
+}
+
+.footer__logo-riot-svg:hover {
+    fill: var(--white-color);
+}
+
+.footer__logo-description {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    
+}
+
+.footer__logo-description-detail {
+    font-size: 13px;
+    color: #737373;
+    text-align: center;
+}
+
+.footer__item-link-terms:hover {
+    background: rgba(128,128,128,.3);
+}
+
+.footer__group-img {
+    text-align: center;
+}
+
+.footer__group-img-main {
+    border-radius: 8px;
+    background-color: #292929;
+    padding: 8px 12px;
+    margin: 4px;
 }
