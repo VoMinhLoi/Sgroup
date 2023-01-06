@@ -226,6 +226,7 @@ li:hover .nav__item-link-img--white {
 .button.button-group__menu {
   background-color: #282828;
   display: none;
+  margin-left: 10px;
 }
 
 .button-group-wrapper {
@@ -236,6 +237,7 @@ li:hover .nav__item-link-img--white {
 .container {
   width: 100%;
   margin-top: calc(var(--header-height) + 0px);
+  background-color: var(--white-color);
 }
 
 .video {
