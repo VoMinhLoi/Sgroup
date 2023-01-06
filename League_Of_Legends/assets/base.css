@@ -251,3 +251,13 @@
 .title__minus {
     font-size: 11px;    
 }
+
+/* ANIMATION */
+@keyframes RotateIteration{
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(180deg);
+    }
+}

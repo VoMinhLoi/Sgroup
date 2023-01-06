@@ -1103,7 +1103,8 @@ a.button.skin__content-main-infor-link {
   fill: none;
   stroke: rgba(255, 255, 255, 0.6);
   stroke-width: 0.25;
-  opacity: 0;
+  -webkit-animation: RotateIteration 30s linear 0s infinite;
+          animation: RotateIteration 30s linear 0s infinite;
 }
 
 .dwpNPm {

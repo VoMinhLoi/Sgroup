@@ -1142,7 +1142,7 @@ a.button.skin__content-main-infor-link {
     fill: none;
     stroke: rgba(255, 255, 255, 0.6);
     stroke-width: 0.25;
-    opacity: 0;
+    animation: RotateIteration 30s linear 0s infinite;
     // animation: 2s cubic-bezier(0.645, 0.045, 0.355, 1) 0s 1 normal forwards running hZCsiL;
 }
 
