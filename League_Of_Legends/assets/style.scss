@@ -70,11 +70,15 @@ span {
 .navigation {
     margin-left: 22px;
     width: 1020px;
+    height: 100%;
 }
 
 .nav__list {
     display: flex;
     list-style: none;
+    height: 100%;
+    flex-wrap: wrap;
+    overflow: hidden;
 }
 .nav__item {
     position: relative;
@@ -100,7 +104,8 @@ span {
     margin-left: 4px;
     font-family: "FF Mark W05",Arial,sans-serif;
     position: relative;
-
+    height: 100%;
+    line-height: 70px;
 }
 .nav__item-link::after {
     content: "";
@@ -212,8 +217,18 @@ li:hover .nav__item-link-img--white {
     align-items: center;
 }
 
+.button.button-group__menu {
+    background-color: #282828;
+    display: none;
+}
+
+.button-group-wrapper {
+    display: flex;
+}
+
 /* Container */
 .container {
+    width: 100%;
     margin-top: calc(var(--header-height) + 0px);
 }
 
