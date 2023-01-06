@@ -59,10 +59,19 @@
     background-color: #111111 !important;
 }
 
+.display-none {
+    display: none;
+}
+
+.visibility-hidden {
+    visibility: hidden;
+}
+
 /* BUTTON */
 .button {
     display: block;
     border-radius: 5px;
+    color: white;
     text-transform: uppercase;
 }
 
@@ -77,7 +86,6 @@
     padding: 8px 16px;
     background-color: #282828;
     border: none;
-    color: white;
     font-size: 13px;
     font-weight: 600;
     letter-spacing: 1px;

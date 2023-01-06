@@ -1,0 +1,17 @@
+@media screen and (max-width: 1024px) {
+  .nav__list {
+    display: none;
+  }
+  .button-group-wrapper {
+    display: none;
+  }
+  .button.button-group__menu {
+    display: block;
+  }
+  .logo--small {
+    display: none;
+  }
+  .logo--large {
+    display: block;
+  }
+}/*# sourceMappingURL=responsive.css.map */
