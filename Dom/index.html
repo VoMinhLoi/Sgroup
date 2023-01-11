@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .form{
+            text-align: center;
+        }
+        .form__title {
+            border-bottom: 1px solid currentColor;
+            box-shadow: 0px 0px 4px 0px currentColor;
+            padding: 10px;
+        }
+
+        .form-main {
+            width: 60%;
+            border: 2px solid currentColor;
+            margin: 10px auto;
+            padding: 5px 8px;
+            position: relative;
+        }
+        .form-main__label {
+            display: block;
+            text-align: left;
+        }
+        .form-main__label ~ .form-main__label{
+            margin-top: 12px;
+        }
+        .form-main__input {
+            width: 100%;
+            border: 1px solid #ccc;
+            height: 28px;
+            margin-top: 4px;
+            border-radius: 3px;
+            padding-left:  5px;
+            box-sizing: border-box;
+        }
+        .submit {
+            /* float: right; */
+            margin-top: 7px;
+            position: relative;
+            left: 35%;
+            width: 150px;
+            height: 28px;
+            border: none;
+            background-color: black;
+            border-radius: 3px;
+            color: white;
+            
+        }
+        .submit::first-letter{
+            text-transform: uppercase;
+        }
+        .table {
+            width: 80%;
+            margin: 40px auto;
+            border: 2px solid black;
+            padding: 10px;
+        }
+
+        .table__header {
+            background-color: #dddddd;
+        }
+        .button {
+            background-color: transparent;
+            text-decoration: underline;
+            color: purple;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="form">
+        <h1 class="form__title">JavaScript CRUD Example Tutorial</h1>
+        <form id="form-main" class="form-main" target="_blank" method="get">
+            <label for="name" class="form-main__label">Full Name*</label>
+            <input id="name" type="text" class="form-main__input">
+            <label for="id" class="form-main__label">Email/Id</label>
+            <input id="id" type="text" class="form-main__input" placeholder="VD: 1,2,3, ...">
+
+            <label for="salary" class="form-main__label">Salary</label>
+            <input id="salary" type="text" class="form-main__input">
+
+            <label for="city" class="form-main__label">City</label>
+            <input id="city" type="text" class="form-main__input">
+            <button id="submit" class="submit">submit</button>
+        </form>
+        <table id="table" class="table">
+            <thead>
+                <tr class="table__row">
+                    <th class="table-row__data table__header">Full Name</th>
+                    <th class="table-row__data table__header">Email Id</th>
+                    <th class="table-row__data table__header">Salary</th>
+                    <th class="table-row__data table__header">City</th>
+                    <th class="table-row__data table__header">Actions</th>
+                </tr>
+            </thead>
+            <!-- <tr class="table__row">
+                <td class="table-row__data"></td>
+                <td class="table-row__data"></td>
+                <td class="table-row__data"></td>
+                <td class="table-row__data"></td>
+                <td class="table-row__data">
+                    <a> Edit </a>
+                    <a> Delete </a>
+                </td>
+            </tr> -->
+        </table>
+    </div>
+    <!-- <script src="app.js"></script> -->
+    <script>
+        var submit_bt = document.getElementById("submit")
+        var idArray = []
+        var data = []
+        var intermediaryData = []
+        var duplicateData = false
+        submit_bt.addEventListener("click", () => {
+            var form = document.getElementById("form-main")
+            form.onsubmit = function(event) {
+                event.preventDefault();
+
+                
+                if(data.length == 0)
+                    Insert()
+                else {
+                    var form = document.getElementById("form-main")
+                    var idCP = form.querySelector("#id").value
+                    duplicateData = data.some(function(item){
+                        return item.id === idCP
+                    })
+                    console.log(duplicateData)
+                    if (!duplicateData)
+                        Insert()
+                    else {
+                        var intermediaryData = data.map(function(item){
+                            var form = document.getElementById("form-main")
+                            var inputs = form.querySelectorAll(".form-main__input")
+                                    
+                            var array = []
+                            for(var input of inputs){
+                                array.push(input.value)
+                            }
+                            var name = array[0]
+                            var id = array[1]
+                            var salary = array[2]
+                            var city = array[3]
+                            if(item.id === idCP)
+                                return {
+                                    name: name,
+                                    id: id,
+                                    salary: salary,
+                                    city: city
+                                }
+                            else
+                                return item
+                        })
+                        data = intermediaryData
+                        InsertTable();
+                    }
+                    
+                }
+                   
+            }
+        })
+        
+        function Insert(){
+            var form = document.getElementById("form-main")
+            var inputs = form.querySelectorAll(".form-main__input")
+            
+            var array = []
+            for(var input of inputs){
+                array.push(input.value)
+            }
+            var name = array[0]
+            var id = array[1]
+            var salary = array[2]
+            var city = array[3]
+            var object = {
+                name: name,
+                id: id,
+                salary: salary,
+                city: city
+            }
+            data.push(object)
+            InsertTable()
+        }
+        function Edit(id){
+            var getItemById = data.filter(function(item){
+                var idItem = parseInt(item.id)
+                return idItem === id
+            })
+            var name = getItemById[0].name
+            var id = getItemById[0].id
+            var salary = getItemById[0].salary
+            var city = getItemById[0].city
+
+            var form = document.getElementById("form-main")
+            var inputs = form.querySelectorAll(".form-main__input")
+            inputs[0].value = name
+            inputs[1].value = id
+            inputs[2].value = salary
+            inputs[3].value= city
+        }
+        function Delete(id){
+            console.log(id)
+            intermediaryData = data.filter(function(item){
+                var idItem = parseInt(item.id)
+                return idItem !== id
+            })
+            data = intermediaryData
+            InsertTable()
+        }
+        function InsertTable(){
+            var table = document.getElementById("table");
+            table.innerHTML = 
+                            `<thead>
+                                <tr class="table__row">
+                                    <th class="table-row__data table__header">Full Name</th>
+                                    <th class="table-row__data table__header">Email Id</th>
+                                    <th class="table-row__data table__header">Salary</th>
+                                    <th class="table-row__data table__header">City</th>
+                                    <th class="table-row__data table__header">Actions</th>
+                                </tr>
+                            </thead> `
+            data.forEach(function(item){
+                InsertDataToTable(item)
+            })
+        }
+        function InsertDataToTable(item){
+            var table = document.getElementById("table");
+            table.innerHTML += 
+                        `
+                        
+                        <tr class="table__row">
+                            <td class="table-row__data">${item.name}</td>
+                            <td class="table-row__data">${item.id}</td>
+                            <td class="table-row__data">${item.salary}</td>
+                            <td class="table-row__data">${item.city}</td>
+                            <td class="table-row__data">
+                                <button class="button" onclick="Edit(${item.id}) "> Edit </button>
+                                <button class="button" onclick="Delete(${item.id}) "> Delete </button>
+                            </td>
+                        </tr>`
+        }
+    
+    </script>
+</body>
+</html>

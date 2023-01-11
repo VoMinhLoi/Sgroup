@@ -70,18 +70,17 @@ span {
 .navigation {
     margin-left: 22px;
     width: 1020px;
-    height: 100%;
 }
 
 .nav__list {
     display: flex;
     list-style: none;
-    height: 100%;
     flex-wrap: wrap;
-    overflow: hidden;
 }
 .nav__item {
     position: relative;
+    display: flex;
+    align-items: center;
 }
 .nav__item--extra:after {
     content: "";
@@ -104,8 +103,6 @@ span {
     margin-left: 4px;
     font-family: "FF Mark W05",Arial,sans-serif;
     position: relative;
-    height: 100%;
-    line-height: 70px;
 }
 .nav__item-link::after {
     content: "";
