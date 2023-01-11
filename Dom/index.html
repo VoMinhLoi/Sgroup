@@ -164,6 +164,7 @@
                         })
                         data = intermediaryData
                         InsertTable();
+                        alert("Cập nhật dữ liệu thành công")
                     }
                     
                 }
@@ -238,7 +239,6 @@
             var table = document.getElementById("table");
             table.innerHTML += 
                         `
-                        
                         <tr class="table__row">
                             <td class="table-row__data">${item.name}</td>
                             <td class="table-row__data">${item.id}</td>
