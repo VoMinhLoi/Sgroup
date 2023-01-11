@@ -82,15 +82,15 @@
         <h1 class="form__title">JavaScript CRUD Example Tutorial</h1>
         <form id="form-main" class="form-main" target="_blank" method="get">
             <label for="name" class="form-main__label">Full Name*</label>
-            <input id="name" type="text" class="form-main__input">
+            <input id="name" type="text" class="form-main__input" >
             <label for="id" class="form-main__label">Email/Id</label>
-            <input id="id" type="text" class="form-main__input" placeholder="VD: 1,2,3, ...">
+            <input id="id" type="text" class="form-main__input" placeholder="VD: 1,2,3, ..." required>
 
             <label for="salary" class="form-main__label">Salary</label>
-            <input id="salary" type="text" class="form-main__input">
+            <input id="salary" type="text" class="form-main__input" >
 
             <label for="city" class="form-main__label">City</label>
-            <input id="city" type="text" class="form-main__input">
+            <input id="city" type="text" class="form-main__input" >
             <button id="submit" class="submit">submit</button>
         </form>
         <table id="table" class="table">
@@ -192,6 +192,7 @@
             }
             data.push(object)
             InsertTable()
+            // alert("Chèn dữ liệu thành công")
         }
         function Edit(id){
             var getItemById = data.filter(function(item){
@@ -211,13 +212,18 @@
             inputs[3].value= city
         }
         function Delete(id){
-            console.log(id)
-            intermediaryData = data.filter(function(item){
-                var idItem = parseInt(item.id)
-                return idItem !== id
-            })
-            data = intermediaryData
-            InsertTable()
+            // if(confirm("Bạn chắc chắn muốn xóa dòng dữ liệu này?")){
+                console.log(id)
+                intermediaryData = data.filter(function(item){
+                    var idItem = parseInt(item.id)
+                    return idItem !== id
+                })
+                data = intermediaryData
+                InsertTable()
+            //     alert("Xóa thành công")    
+            // }
+            // else
+            //     alert("Hủy xóa thành công")            
         }
         function InsertTable(){
             var table = document.getElementById("table");
