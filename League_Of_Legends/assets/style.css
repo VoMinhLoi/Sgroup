@@ -242,6 +242,7 @@ li:hover .nav__item-link-img--white {
   position: relative;
   display: flex;
   justify-content: center;
+  z-index: 2;
 }
 
 .video__background {
@@ -290,6 +291,8 @@ li:hover .nav__item-link-img--white {
   max-height: 400px;
   height: 400px;
   padding: 120px 60px 40px 0;
+  position: relative;
+  z-index: 1;
 }
 
 .news-wrapper {
@@ -393,6 +396,18 @@ li:hover .nav__item-link-img--white {
   padding: 140px 0px 15vw;
   display: flex;
   background-color: var(--white-color);
+  position: relative;
+  z-index: 2;
+}
+
+.profile::after {
+  content: "";
+  height: 200px;
+  width: 100%;
+  background-color: white;
+  position: absolute;
+  top: 100%;
+  left: 0;
 }
 
 .profile__title {
@@ -737,6 +752,7 @@ li:hover .nav__item-link-img--white {
   height: 1260px;
   margin-top: 400px;
   position: relative;
+  z-index: 1;
 }
 
 .skin {
@@ -1229,7 +1245,7 @@ a.button.skin__content-main-infor-link {
   font-weight: bold;
 }
 
-.modes__content-news-wrapper-right-item-button--clicked {
+.modes__content-news-wrapper-right-item-rectangle--clicked {
   position: absolute;
   background-color: rgb(11, 198, 227);
   width: 100%;
@@ -1266,18 +1282,7 @@ a.button.skin__content-main-infor-link {
   padding-bottom: 9.375rem;
   background-color: rgb(3, 6, 8);
   color: white;
-}
-
-.map-wrapper::after {
-  content: "";
-  background-image: url(/images/background-cross-white.png);
-  height: 460px;
-  width: 100%;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-repeat: repeat-x;
-  z-index: 0;
+  z-index: 2;
 }
 
 .map {
@@ -1331,6 +1336,19 @@ a.button.skin__content-main-infor-link {
 .feature-wrapper {
   height: 800px;
   background-color: var(--white-color);
+  position: relative;
+  z-index: 1;
+}
+
+.feature-wrapper::after {
+  content: "";
+  background-image: url(/images/background-cross-white.png);
+  height: 460px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-repeat: repeat-x;
 }
 
 .feature {
@@ -1342,6 +1360,8 @@ a.button.skin__content-main-infor-link {
 
 .feature__title {
   transform: translateY(20px);
+  position: relative;
+  z-index: 1;
 }
 
 .feature__content {
@@ -1420,7 +1440,7 @@ a.button.skin__content-main-infor-link {
   height: 100%;
   position: fixed;
   top: 0;
-  z-index: -1;
+  z-index: 0;
 }
 
 .video-end__text {
@@ -1454,6 +1474,11 @@ a.button.skin__content-main-infor-link {
   display: flex;
   width: 20%;
   align-items: center;
+}
+
+.footer {
+  z-index: 2;
+  position: relative;
 }
 
 .footer__list-wrapper {

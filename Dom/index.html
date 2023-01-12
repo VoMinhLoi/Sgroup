@@ -212,7 +212,8 @@
             inputs[3].value= city
         }
         function Delete(id){
-            // if(confirm("Bạn chắc chắn muốn xóa dòng dữ liệu này?")){
+            var confir = confirm("Bạn chắc chắn muốn xóa dòng dữ liệu này?")
+            if(confir){
                 console.log(id)
                 intermediaryData = data.filter(function(item){
                     var idItem = parseInt(item.id)
@@ -220,10 +221,10 @@
                 })
                 data = intermediaryData
                 InsertTable()
-            //     alert("Xóa thành công")    
-            // }
-            // else
-            //     alert("Hủy xóa thành công")            
+                alert("Xóa thành công")    
+            }
+            else
+                alert("Hủy xóa thành công")            
         }
         function InsertTable(){
             var table = document.getElementById("table");
