@@ -18,6 +18,7 @@ span {
 
 .wrapper {
   width: 100%;
+  overflow: hidden;
 }
 
 /* Header */
@@ -226,7 +227,8 @@ li:hover .nav__item-link-img--white {
   margin-left: 10px;
 }
 
-.button-group-wrapper {
+.button-group-wrapper,
+.button-group-wrapper-2 {
   display: flex;
 }
 
@@ -471,7 +473,7 @@ li:hover .nav__item-link-img--white {
 .profile__content-title-description {
   font-size: 14px;
   color: #010101;
-  padding: 0 140px;
+  padding: 0 12%;
   margin: 0 300px;
   line-height: 24px;
 }
@@ -726,8 +728,8 @@ li:hover .nav__item-link-img--white {
 
 .profile__content-slide-group-img::after {
   content: "";
-  width: 775px;
-  height: 775px;
+  width: 100%;
+  height: 86%;
   position: absolute;
   border: 2px solid #bb9243;
   top: 26px;
@@ -746,6 +748,8 @@ li:hover .nav__item-link-img--white {
      object-fit: contain;
   position: relative;
   display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .skin-wrapper {
@@ -1300,7 +1304,6 @@ a.button.skin__content-main-infor-link {
 .map__content-wrapper {
   width: 100%;
   height: 100%;
-  max-width: 1300px;
   margin: 0px auto;
   display: flex;
   align-items: center;
@@ -1309,18 +1312,12 @@ a.button.skin__content-main-infor-link {
 .map__content-img {
   min-width: 0px;
   margin: 0 -12%;
-  width: 1166px;
+  width: 100%;
 }
 
 .map__content-img-wrapper-main {
   width: 100%;
   height: 100%;
-}
-
-.map__content-img-wrapper-1 {
-  width: 200%;
-  margin: 10% 0px 0px -50%;
-  max-width: 1500px;
 }
 
 .map__content-text {

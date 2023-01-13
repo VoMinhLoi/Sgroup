@@ -1,4 +1,15 @@
 @media screen and (max-width: 1024px) {
+  .header {
+    padding: 0 16px;
+  }
+  .brand__riot {
+    width: 95px;
+    height: 32px;
+  }
+  .brand__icon-extra {
+    margin-left: 8px;
+    font-size: 16px;
+  }
   .nav__list {
     display: none;
   }
@@ -6,12 +17,164 @@
     display: none;
   }
   .button.button-group__menu {
-    display: block;
+    display: flex;
+    border-radius: 18px;
   }
   .logo--small {
     display: none;
   }
   .logo--large {
     display: block;
+  }
+  .img-internet {
+    width: 24px;
+  }
+  .button.button--size-s {
+    width: 48px;
+    height: 48px;
+    font-size: 18px;
+  }
+  .img__introduce-img {
+    width: 410px;
+    height: 180px;
+  }
+  #open-close-cb:checked ~ .navigation-tab {
+    visibility: visible;
+  }
+  #open-close-cb:checked ~ .overlay-close-nav {
+    visibility: visible;
+  }
+  .overlay-close-nav {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+  }
+  @-webkit-keyframes RightToLeft {
+    from {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  @keyframes RightToLeft {
+    from {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  .navigation-tab {
+    width: 470px;
+    background-color: #1f1f1f;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 16px;
+    list-style: none;
+    overflow-y: scroll;
+    -webkit-animation: RightToLeft 0.3s linear 0s;
+            animation: RightToLeft 0.3s linear 0s;
+    transition: 0;
+    visibility: hidden;
+    z-index: 1;
+  }
+  h1.navigation-tab__title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+  .logo__lol-2 {
+    height: 42px;
+  }
+  .navigation-tab__item-link {
+    display: flex;
+    padding: 12px 18px;
+    color: var(--white-color);
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    height: 48px;
+    line-height: 24px;
+    justify-content: space-between;
+  }
+  .navigation-tab__item-link:hover {
+    background-color: #333;
+    border-radius: 5px;
+  }
+  .navigation-tab__item + .navigation-tab__item {
+    margin: 8px 0;
+  }
+  .button-group-wrapper-2 {
+    flex-direction: column;
+    margin-top: 20px;
+    padding: 16px 0;
+  }
+  .button.button--size-m {
+    padding: 20px;
+    font-size: 16px;
+  }
+  .button--size-m {
+    background-color: #333;
+  }
+  .button--size-m + .button--size-m {
+    margin-top: 20px;
+  }
+  .news__list-item-infor {
+    padding: 0 10px;
+    width: 30%;
+  }
+  .common-border-small::before {
+    width: 100%;
+  }
+  .news__list-item-infor-name {
+    margin: 8px -16px 4px 0px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+  .news__list-item-infor-description {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 8;
+  }
+  .profile__content-title-description {
+    margin: 0;
+    padding: 0 24%;
+  }
+  .profile__content-slide-img-infor,
+.profile__content-slide-nav-video {
+    margin-left: 24%;
+  }
+  .profile__content-slide-img {
+    z-index: 1;
+    position: relative;
+  }
+  .profile__content-slide-group-img::after {
+    width: 78%;
+    height: 52%;
+    top: 24%;
+    left: 23%;
+  }
+  .profile__content-slide-img-item {
+    left: 18%;
+  }
+  .skin__content-main-infor {
+    transition: 0.5s;
+    margin: 16% auto;
+    position: unset;
   }
 }/*# sourceMappingURL=responsive.css.map */
