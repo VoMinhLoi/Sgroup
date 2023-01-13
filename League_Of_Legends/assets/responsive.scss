@@ -59,16 +59,7 @@
         background: rgba(0,0,0,.6);
         z-index: 1;
     }
-    @keyframes RightToLeft {
-        from {
-            opacity: 0;
-             transform: translateX(100%);
-        }
-        to {
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
+    
     .navigation-tab {
         width: 50%;
         background-color: #1f1f1f;
@@ -200,7 +191,13 @@
     .map__content-img {
         width: 90%;
     }
+    // DOWNLOAD 
+    .download {
+        flex-wrap: nowrap;
+    }
+    
     // FOOTER
+    
     .footer__list {
         flex-direction: column;
     }
@@ -210,5 +207,102 @@
     .footer__item-link {
         font-size: 14px;
         border-radius: 5px;
+    }
+}
+@media screen and (max-width: 800px) {
+    .title {
+        transform: unset;
+        padding: unset;
+    }
+    .video__background-src {
+        // visibility: hidden;
+        display: none;
+    }
+    .video__background-src-mobile {
+        visibility: visible;
+    }
+    
+    .video__introduce.common-border::before{
+        visibility: hidden;
+    }.video__introduce.common-border {
+        top: 0;
+    }
+    .navigation-tab {
+        width: 100%;
+    }
+    .news {
+        padding: 0;
+    }
+    .news__title {
+        align-self: flex-start;
+        padding: 18px;
+    }
+    .news__detail {
+        margin: 24px;
+    }
+    .news-wrapper {
+        flex-direction: column;
+    }
+    .news__list-item {
+        width: 100%;
+    }
+    .feature__title {
+        display: none;
+    }
+    .feature__content-list {
+        flex-wrap: wrap;
+    }
+    .feature__content-item {
+        width: 100%;
+    }
+    .feature__content-item + .feature__content-item {
+        margin-top: 70px;
+    }
+    // PROFILE
+    .profile__title {
+        display: none;
+    }
+    .profile__content  {
+        
+        padding: unset;
+    }
+    // SKIN
+    .skin__title {
+        display: none;
+    }
+    .skin.WIDTH-BLOCK-60px {
+        // display: none;
+        // width: 0;
+    }
+    .skin__content-main-infor {
+        transition: 0.5s;
+        margin: 16% auto;
+        position: unset;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .skin__content-main-img:hover ~ .skin__content-main-infor {
+        transition: 0.5s;
+        transform: unset;   
+    }
+    a.button.skin__content-main-infor-link {
+        position: absolute;
+        top: 24%;
+    }
+    // MODES
+    .modes__title {
+        display: none;
+    }
+    // MAP
+    .map__title {
+        display: none;
+    }
+    // DOWNLOAD
+    .download {
+        flex-direction: column;
+    }
+    .WIDTH-BLOCK-60px::after {
+        width: unset;
     }
 }

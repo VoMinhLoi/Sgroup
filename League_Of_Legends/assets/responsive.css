@@ -54,26 +54,6 @@
     background: rgba(0, 0, 0, 0.6);
     z-index: 1;
   }
-  @-webkit-keyframes RightToLeft {
-    from {
-      opacity: 0;
-      transform: translateX(100%);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  @keyframes RightToLeft {
-    from {
-      opacity: 0;
-      transform: translateX(100%);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
   .navigation-tab {
     width: 50%;
     background-color: #1f1f1f;
@@ -201,6 +181,9 @@
   .map__content-img {
     width: 90%;
   }
+  .download {
+    flex-wrap: nowrap;
+  }
   .footer__list {
     flex-direction: column;
   }
@@ -210,5 +193,91 @@
   .footer__item-link {
     font-size: 14px;
     border-radius: 5px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .title {
+    transform: unset;
+    padding: unset;
+  }
+  .video__background-src {
+    display: none;
+  }
+  .video__background-src-mobile {
+    visibility: visible;
+  }
+  .video__introduce.common-border::before {
+    visibility: hidden;
+  }
+  .video__introduce.common-border {
+    top: 0;
+  }
+  .navigation-tab {
+    width: 100%;
+  }
+  .news {
+    padding: 0;
+  }
+  .news__title {
+    align-self: flex-start;
+    padding: 18px;
+  }
+  .news__detail {
+    margin: 24px;
+  }
+  .news-wrapper {
+    flex-direction: column;
+  }
+  .news__list-item {
+    width: 100%;
+  }
+  .feature__title {
+    display: none;
+  }
+  .feature__content-list {
+    flex-wrap: wrap;
+  }
+  .feature__content-item {
+    width: 100%;
+  }
+  .feature__content-item + .feature__content-item {
+    margin-top: 70px;
+  }
+  .profile__title {
+    display: none;
+  }
+  .profile__content {
+    padding: unset;
+  }
+  .skin__title {
+    display: none;
+  }
+  .skin__content-main-infor {
+    transition: 0.5s;
+    margin: 16% auto;
+    position: unset;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .skin__content-main-img:hover ~ .skin__content-main-infor {
+    transition: 0.5s;
+    transform: unset;
+  }
+  a.button.skin__content-main-infor-link {
+    position: absolute;
+    top: 24%;
+  }
+  .modes__title {
+    display: none;
+  }
+  .map__title {
+    display: none;
+  }
+  .download {
+    flex-direction: column;
+  }
+  .WIDTH-BLOCK-60px::after {
+    width: unset;
   }
 }/*# sourceMappingURL=responsive.css.map */
