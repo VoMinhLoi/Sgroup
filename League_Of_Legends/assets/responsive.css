@@ -39,7 +39,7 @@
     height: 180px;
   }
   #open-close-cb:checked ~ .navigation-tab {
-    visibility: visible;
+    display: block;
   }
   #open-close-cb:checked ~ .overlay-close-nav {
     visibility: visible;
@@ -87,7 +87,6 @@
     -webkit-animation: RightToLeft 0.3s linear 0s;
             animation: RightToLeft 0.3s linear 0s;
     transition: 0;
-    visibility: hidden;
     z-index: 1;
   }
   h1.navigation-tab__title {
