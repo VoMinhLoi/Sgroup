@@ -176,4 +176,14 @@
     margin: 16% auto;
     position: unset;
   }
+  .footer__list {
+    flex-direction: column;
+  }
+  .footer__item {
+    margin: 8px 0;
+  }
+  .footer__item-link {
+    font-size: 14px;
+    border-radius: 5px;
+  }
 }/*# sourceMappingURL=responsive.css.map */

@@ -1507,7 +1507,8 @@ a.button.skin__content-main-infor-link {
     align-items: center;
     background-color: #0c1c24;
     justify-content: space-between;
-
+    position: relative;
+    z-index: 1;
 }
 
 .download__title {
@@ -1534,7 +1535,6 @@ a.button.skin__content-main-infor-link {
 }
 
 .footer__list-wrapper {
-    height: 84px;
     margin: 0 auto;
     display: flex;
     background-color: #292929;
@@ -1545,10 +1545,13 @@ a.button.skin__content-main-infor-link {
 .footer__list {
     padding: 24px;
     list-style: none;
+    display: flex;
 }
 
 .footer__item {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+
 }
 
 .footer__item-link {
