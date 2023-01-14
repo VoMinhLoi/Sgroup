@@ -178,6 +178,16 @@
     margin: 16% auto;
     position: unset;
   }
+  .modes__content-news-wrapper-left {
+    position: relative;
+    top: -700px;
+    margin: auto;
+  }
+  .modes__content-news-wrapper-left-paragraph {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .map__content-img {
     width: 90%;
   }
@@ -264,7 +274,7 @@
     transition: 0.5s;
     transform: unset;
   }
-  a.button.skin__content-main-infor-link {
+  a.button.skin__content-main-infor-link--mobile {
     position: absolute;
     top: 24%;
   }
