@@ -821,7 +821,7 @@ li:hover .nav__item-link-img--white {
     position: absolute;
     border: 2px solid #bb9243;
     top: 26px;
-    left: 0;
+    left: -4px;
     border-radius: 100%;
 }
 
@@ -837,6 +837,7 @@ li:hover .nav__item-link-img--white {
     display: block;
     width: 100%;
     height: 100%;
+    animation: FadeIn 0.3s linear 0s forwards;
 }
 
 
