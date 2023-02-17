@@ -36,7 +36,7 @@ span {
     padding: 0 32px 0 36px;
     border-bottom: 2px solid rgba(51,51,51,.25);
     text-transform: uppercase;
-    z-index: 3;
+    z-index: 10;
 }
 
 .brand {
@@ -295,7 +295,7 @@ li:hover .nav__item-link-img--white {
     position: relative;
     display: flex;
     justify-content: center;
-    z-index: 2;
+    z-index: 3;
 }
 
 .video__background,
@@ -353,7 +353,7 @@ li:hover .nav__item-link-img--white {
     max-height: 400px;
     padding: 120px 60px 40px 0;
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 .news-wrapper {
@@ -387,7 +387,13 @@ li:hover .nav__item-link-img--white {
     width: 420px;
 }
 
+.news__list-item:hover .common-border-small::before {
+    border-radius: 0;
+}
 
+.news__list-item:hover .common-border-small::after {
+    display: block;
+}
 
 .news__list-item-link-wrapper {
     width: 145px;
@@ -1736,6 +1742,15 @@ a.button.skin__content-main-infor-link {
     display: flex;
     list-style: none;
     justify-content: center;
+}
+
+.feature__content-item:hover .common-border-medium::before {
+    border-radius: 0;
+    transition: 0.3s;
+}
+
+.feature__content-item:hover .common-border-medium::after {
+    display: block;
 }
 
 
